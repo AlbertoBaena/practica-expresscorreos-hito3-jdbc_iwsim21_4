@@ -5,22 +5,21 @@ import expresscorreos.model.Cartero;
 public class Main {
     // @TODO: Sustituya xxxx por los parámetros de su conexión
 
-    private static final String DB_SERVER = "xxxx";
+    private static final String DB_SERVER = "localhost";
 
-    private static final int DB_PORT = xxxx;
+    private static final int DB_PORT = 3306;
 
-    private static final String DB_NAME = "xxxx";
+    private static final String DB_NAME = "IWSIM21_4";
 
-    private static final String DB_USER = "xxxx";
+    private static final String DB_USER = "root";
 
-    private static final String DB_PASS = "xxxx";
+    private static final String DB_PASS = "";
 
     private static Connection conn;
 
     public static void main(String[] args) throws Exception {
 
         Class.forName("com.mysql.cj.jdbc.Driver");
-
         String url = "jdbc:mysql://" + DB_SERVER + ":" + DB_PORT + "/" + DB_NAME;
         conn = DriverManager.getConnection(url, DB_USER, DB_PASS);
 
